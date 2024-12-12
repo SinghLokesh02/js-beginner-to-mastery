@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Error</title>
+  </head>
+  <body>
+    <script>      
+      // Try catch exceptions
+      try {
+        console.log("Starting...");
+        let num = 5;
+        num.toUpperCase(); // TypeError: num.toUpperCase is not a function
+        console.log("Ending...");
+      } catch (error) {
+        console.log(error.name);
+        console.log(error.message);
+        console.log(error.stack);
+      } finally {
+        console.log("Hello");
+      }
+
+      // Use of Finally block
+      function checkEven(num) {
+        try {
+          if (num % 2 === 0) {
+            return "Number is even";
+          } else {
+            return "Number is odd";
+          }
+        } catch (error) {
+          console.log(error);
+        } finally {
+          console.log("I am the Last");
+        }
+      }
+      const ans = checkEven(232);
+      console.log(ans);
+    </script>
+  </body>
+</html>
