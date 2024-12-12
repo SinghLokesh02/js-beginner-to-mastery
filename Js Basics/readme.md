@@ -70,11 +70,10 @@ Variables store data that can be used and modified later in the program.
 - JavaScript is case-sensitive.  
 
 ---
-Here's a suggested section on **Rules for Naming Variables in JavaScript** for your README file:
-
----
 
 ## Rules for Naming Variables in JavaScript
+
+---
 
 When declaring variables in JavaScript, it’s important to follow specific rules and best practices to ensure clarity and maintainability in your code. Here are the key guidelines:
 
