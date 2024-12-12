@@ -71,7 +71,7 @@ Variables store data that can be used and modified later in the program.
 
 ---
 
-## Rules for Naming Variables in JavaScript
+### Rules for Naming Variables in JavaScript
 
 ---
 
