@@ -1,0 +1,49 @@
+<!-- textContent vs innerText in JavaScript -->
+
+<!-- 
+Notes:
+1. `textContent` gets or sets the content of an element, including hidden elements.
+2. `innerText` gets or sets the visible text content, excluding hidden elements.
+3. Use `textContent` for performance when styling isn't a concern.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>textContent vs innerText</title>
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>textContent vs innerText</h1>
+    <p id="visible">This is a visible paragraph.</p>
+    <p id="hidden" class="hidden">This is a hidden paragraph.</p>
+    
+    <button id="showTextContent">Show textContent</button>
+    <button id="showInnerText">Show innerText</button>
+
+    <p id="output"></p>
+
+    <script>
+        // Select elements
+        const visibleParagraph = document.getElementById('visible');
+        const hiddenParagraph = document.getElementById('hidden');
+        const output = document.getElementById('output');
+
+        // Show textContent
+        document.getElementById('showTextContent').addEventListener('click', () => {
+            output.textContent = `textContent: Visible: "${visibleParagraph.textContent}", Hidden: "${hiddenParagraph.textContent}"`;
+        });
+
+        // Show innerText
+        document.getElementById('showInnerText').addEventListener('click', () => {
+            output.textContent = `innerText: Visible: "${visibleParagraph.innerText}", Hidden: "${hiddenParagraph.innerText}"`;
+        });
+    </script>
+</body>
+</html>

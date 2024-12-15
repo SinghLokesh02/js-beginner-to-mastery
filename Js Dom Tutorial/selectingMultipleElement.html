@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Getting Multiple Element ans Looping</title>
+  </head>
+  <body>
+    <p>Paragraph 1</p>
+    <p>Paragraph 2</p>
+    <p>Paragraph 3</p>
+
+    <script>
+      const paragraphs = document.getElementsByTagName("p");
+
+      for (let i = 0; i < paragraphs.length; i++) {
+        paragraphs[i].style.color = "blue";
+      }
+
+      // Using a forEach loop (modern approach)
+      Array.from(paragraphs).forEach((paragraph) => {
+        paragraph.style.fontWeight = "bold";
+      });
+
+      /*
+      getElementsByTagName selects elements by tag name.
+      Use a for loop or forEach loop to iterate over the selected elements.
+
+      */
+    </script>
+  </body>
+</html>

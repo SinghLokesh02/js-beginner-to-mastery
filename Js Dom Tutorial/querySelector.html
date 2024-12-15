@@ -1,0 +1,51 @@
+<!-- Query Selector in JavaScript -->
+
+<!-- 
+Notes:
+1. Use `document.querySelector(selector)` to select the first element matching a CSS selector.
+2. `document.querySelectorAll(selector)` returns all elements matching the selector.
+3. Allows selecting elements using IDs, classes, tags, or attribute selectors.
+--> 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>querySelector Example</title>
+    <style>
+        .highlight {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>Using querySelector</h1>
+    <p class="info">This is the first paragraph.</p>
+    <p class="info">This is the second paragraph.</p>
+    <p>This paragraph does not have the class "info".</p>
+
+    <button id="highlightBtn">Highlight First Paragraph</button>
+    <button id="highlightAllBtn">Highlight All Paragraphs</button>
+
+    <script>
+        // Select the first paragraph with the class 'info'
+        const firstInfoParagraph = document.querySelector('.info');
+
+        // Select all paragraphs with the class 'info'
+        const allInfoParagraphs = document.querySelectorAll('.info');
+
+        // Button to highlight the first paragraph
+        document.getElementById('highlightBtn').addEventListener('click', () => {
+            firstInfoParagraph.classList.add('highlight');
+        });
+
+        // Button to highlight all paragraphs with the class 'info'
+        document.getElementById('highlightAllBtn').addEventListener('click', () => {
+            allInfoParagraphs.forEach(paragraph => {
+                paragraph.classList.add('highlight');
+            });
+        });
+    </script>
+</body>
+</html>

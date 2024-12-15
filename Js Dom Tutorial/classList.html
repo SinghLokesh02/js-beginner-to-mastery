@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>classList</title>
+    <style>
+      .newClass {
+        background-color: yellow;
+      }
+
+      .activeClass {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="myDiv" class="initialClass"></div>
+
+    <script>
+      const myDiv = document.getElementById("myDiv");
+
+      // Adding a class
+      myDiv.classList.add("newClass");
+
+      // Removing a class
+      myDiv.classList.remove("initialClass");
+
+      // Toggling a class
+      myDiv.classList.toggle("activeClass");
+
+      // classList provides methods to add, remove, toggle, and check for the presence of classes.
+    </script>
+  </body>
+</html>

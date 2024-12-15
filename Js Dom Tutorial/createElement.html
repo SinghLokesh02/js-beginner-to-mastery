@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Element</title>
+
+    <style>
+      .newDivClass {
+        border: 2px solid red;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      const newDiv = document.createElement("div");
+      newDiv.classList.add("newDivClass");
+      newDiv.textContent = "This is a new div.";
+
+      const myBody = document.body;
+      myBody.appendChild(newDiv);
+
+      /*
+        Create elements using createElement.
+        Set attributes, add classes, and assign text content to the new element.
+        Append the new element to the DOM using appendChild
+      */
+    </script>
+  </body>
+</html>

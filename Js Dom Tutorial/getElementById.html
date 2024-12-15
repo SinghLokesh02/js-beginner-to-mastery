@@ -1,0 +1,45 @@
+<!-- Select Elements Using ID in JavaScript -->
+
+<!-- 
+Notes:
+1. To select an HTML element by its `id`, use `document.getElementById('idName')`.
+2. The `id` attribute must be unique within the HTML document.
+3. Commonly used to manipulate specific elements, such as changing their content or styles.
+--> 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Elements Using ID</title>
+    <style>
+        #example {
+            color: blue;
+            font-size: 20px;
+            text-align: center;
+            border: 1px solid black;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Using ID to Select Elements</h1>
+    <p id="example">This is a paragraph with an ID.</p>
+    <button id="changeText">Change Text</button>
+
+    <script>
+        // Select the paragraph using its ID
+        const paragraph = document.getElementById('example');
+
+        // Select the button using its ID
+        const button = document.getElementById('changeText');
+
+        // Add an event listener to the button
+        button.addEventListener('click', () => {
+            paragraph.textContent = "The text has been changed!";
+            paragraph.style.color = "red"; // Change the text color to red
+        });
+    </script>
+</body>
+</html>

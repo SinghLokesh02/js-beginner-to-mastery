@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>get and Set Attribte</title>
+  </head>
+  <body>
+    <img id="myImage" src="image.jpg" alt="Image description" />
+
+    <script>
+      const myImage = document.getElementById("myImage");
+
+      // Getting attributes
+      const src = myImage.getAttribute("src");
+      const alt = myImage.getAttribute("alt");
+
+      console.log(src); // Output: image.jpg
+      console.log(alt); // Output: Image description
+
+      // Setting attributes
+      myImage.setAttribute("src", "newImage.jpg");
+      myImage.setAttribute("alt", "New image description");
+
+      /*
+        The image source and alt attributes have been updated.
+        The image will now display the new image and description.
+        Use getAttribute to retrieve attribute values.
+        Use setAttribute to modify or add attributes.
+      */
+    </script>
+  </body>
+</html>
